@@ -1,0 +1,73 @@
+{
+  "window": {"width": 1280, "height": 720, "fps": 60, "title": "Gesture Fighter"},
+  "match": {"round_time": 99, "countdown": 2.2, "ko_delay": 2.5, "hitstop": 0.06},
+  "arena": {"left": 90, "right": 1190, "floor_y": 560, "min_separation": 70, "player_start": 420, "enemy_start": 860},
+  "combat": {"block_reduction": 0.8, "attack_cooldown": 0.15, "block_move_factor": 0.5},
+
+  "moves": {
+    "punch": {"damage": 7, "startup": 0.10, "active": 0.08, "recovery": 0.22, "reach": 125, "knockback": 170, "hitstun": 0.28},
+    "heavy": {"damage": 14, "startup": 0.28, "active": 0.10, "recovery": 0.40, "reach": 140, "knockback": 320, "hitstun": 0.45}
+  },
+
+  "roster": [
+    {"id": "manuel", "name": "MANUEL", "style": "Equilibrado", "health": 100, "speed": 270, "power": 1.0, "height": 1.67,
+     "face": {"hair": "spiky", "accessories": ["glasses"]},
+     "colors": {"skin": [232, 190, 150], "shirt": [11, 20, 38], "pants": [47, 49, 54], "gloves": [230, 50, 50], "hair": [30, 30, 40]}},
+    {"id": "sergio", "name": "SERGIO", "style": "Veloz", "health": 90, "speed": 330, "power": 0.9, "height": 1.60,
+     "face": {"hair": "short", "accessories": ["beard"]},
+     "colors": {"skin": [200, 150, 110], "shirt": [173, 137, 148], "pants": [161, 177, 201], "gloves": [250, 200, 40], "hair": [30, 30, 40]}},
+    {"id": "gilberto", "name": "GILBERTO", "style": "Potente", "health": 120, "speed": 220, "power": 1.2, "height": 1.72,
+     "face": {"hair": "curly", "accessories": ["sunglasses", "cigarette"]},
+     "colors": {"skin": [111, 78, 55], "shirt": [12, 71, 11], "pants": [46, 71, 89], "gloves": [40, 40, 40], "hair": [24, 20, 20]}},
+    {"id": "pablo", "name": "PABLO", "style": "Técnico", "health": 100, "speed": 280, "power": 1.05, "height": 1.70,
+     "face": {"hair": "spiky_small", "accessories": ["headphones"]},
+     "colors": {"skin": [225, 200, 170], "shirt": [82, 78, 78], "pants": [39, 46, 69], "gloves": [240, 240, 240], "hair": [30, 30, 40]}}
+  ],
+
+  "default_difficulty": "normal",
+  "difficulties": {
+    "facil":   {"label": "FÁCIL",   "reaction_time": 0.30, "aggression": 0.35, "block_chance": 0.20, "error_rate": 0.35,
+                "think_time": [0.45, 0.9], "recover_time": [0.7, 1.2], "retreat_chance": 0.20, "speed_factor": 0.75,
+                "heavy_chance": 0.05, "combo_chance": 0.0, "block_duration": [0.3, 0.6], "damage_mult": 0.8},
+    "normal":  {"label": "NORMAL",  "reaction_time": 0.12, "aggression": 0.55, "block_chance": 0.45, "error_rate": 0.18,
+                "think_time": [0.25, 0.55], "recover_time": [0.45, 0.8], "retreat_chance": 0.30, "speed_factor": 0.9,
+                "heavy_chance": 0.15, "combo_chance": 0.2, "block_duration": [0.35, 0.7], "damage_mult": 1.0},
+    "dificil": {"label": "DIFÍCIL", "reaction_time": 0.05, "aggression": 0.8, "block_chance": 0.65, "error_rate": 0.07,
+                "think_time": [0.1, 0.3], "recover_time": [0.25, 0.5], "retreat_chance": 0.35, "speed_factor": 1.0,
+                "heavy_chance": 0.25, "combo_chance": 0.45, "block_duration": [0.4, 0.8], "damage_mult": 1.15}
+  },
+
+  "movement": {
+    "source": "ultrasonic",
+    "sources": ["ultrasonic", "hand", "keyboard"],
+    "smoothing": 0.25,
+    "deadzone": 0.015,
+    "hand_x_range": [0.2, 0.8],
+    "keyboard_sim_speed_cm": 30
+  },
+
+  "keyboard": {
+    "attack": ["j", "space"],
+    "block": ["k"],
+    "heavy_attack": ["l"],
+    "move_left": ["a", "left"],
+    "move_right": ["d", "right"]
+  },
+
+  "vision": {
+    "enabled": true,
+    "camera_index": 0,
+    "width": 640,
+    "height": 480,
+    "mirror": true,
+    "max_hands": 2,
+    "model_complexity": 0,
+    "min_detection_confidence": 0.6,
+    "min_tracking_confidence": 0.5,
+    "panel_visible": true,
+    "opencv_debug_window": false,
+    "retry_seconds": 3.0
+  },
+
+  "audio": {"enabled": true, "volume": 0.45}
+}

@@ -1,0 +1,62 @@
+{
+  "_ayuda": "Cada gesto: detector (registrado en src/vision/gesture_recognizer.py), action (registrada en src/game/actions.py), mode trigger|hold, hands any|both|left|right. Ver README, sección 'Calibrar y añadir gestos'.",
+
+  "features": {
+    "curled_ratio": 1.15,
+    "extended_ratio": 1.70,
+    "thumb_curled": 0.45,
+    "thumb_extended": 0.80
+  },
+  "release_frames": 2,
+
+  "gestures": [
+    {
+      "id": "fist",
+      "name": "Puño cerrado",
+      "detector": "fist",
+      "action": "attack",
+      "mode": "trigger",
+      "hands": "any",
+      "confidence_threshold": 0.75,
+      "release_threshold": 0.50,
+      "min_frames": 2,
+      "min_time_ms": 0,
+      "cooldown_ms": 300,
+      "priority": 10,
+      "enabled": true,
+      "params": {"thumb_weight": 0.0}
+    },
+    {
+      "id": "open_palm",
+      "name": "Palma abierta",
+      "detector": "open_palm",
+      "action": "block",
+      "mode": "hold",
+      "hands": "any",
+      "confidence_threshold": 0.75,
+      "release_threshold": 0.55,
+      "min_frames": 3,
+      "min_time_ms": 60,
+      "cooldown_ms": 0,
+      "priority": 5,
+      "enabled": true,
+      "params": {"thumb_weight": 0.2}
+    },
+    {
+      "id": "two_fists",
+      "name": "Dos puños",
+      "detector": "fist",
+      "action": "heavy_attack",
+      "mode": "trigger",
+      "hands": "both",
+      "confidence_threshold": 0.75,
+      "release_threshold": 0.50,
+      "min_frames": 3,
+      "min_time_ms": 0,
+      "cooldown_ms": 900,
+      "priority": 20,
+      "enabled": false,
+      "params": {"thumb_weight": 0.0}
+    }
+  ]
+}

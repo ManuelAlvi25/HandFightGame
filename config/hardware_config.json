@@ -1,0 +1,40 @@
+{
+  "_ayuda": "mode: simulation | hardware. transport: tcp (Arduino Wi-Fi) | serial (USB). Ver README, sección 'Conectar Arduino'.",
+
+  "mode": "simulation",
+  "transport": "tcp",
+  "tcp": {"host": "192.168.4.1", "port": 5000, "connect_timeout": 2.0},
+  "serial": {"port": "COM3", "baudrate": 115200},
+
+  "protocol": {
+    "checksum": true,
+    "ping_interval": 1.0,
+    "timeout": 3.0,
+    "reconnect_interval": 2.0,
+    "send_interval": 0.1
+  },
+
+  "ultrasonic": {
+    "min_cm": 10,
+    "max_cm": 60,
+    "invert": false,
+    "valid_min_cm": 2,
+    "valid_max_cm": 400,
+    "median_window": 5,
+    "max_jump_cm": 50,
+    "timeout_s": 1.0
+  },
+
+  "leds": {
+    "player_count": 5,
+    "enemy_count": 5,
+    "critical_threshold": 0.25,
+    "blink_hz": 4
+  },
+
+  "simulation": {
+    "initial_cm": 25,
+    "noise_cm": 0.3,
+    "invalid_rate": 0.0
+  }
+}

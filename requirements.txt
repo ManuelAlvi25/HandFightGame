@@ -1,0 +1,9 @@
+# Probado en Windows 11 con Python 3.11.9 (64 bits).
+# mediapipe 0.10.21 es la última versión con la API "solutions.hands" (no requiere descargar modelos)
+# y exige numpy<2. mediapipe instala por sí mismo opencv-contrib-python: NO instale además
+# opencv-python, porque ambos paquetes proporcionan el módulo cv2 y entran en conflicto.
+mediapipe==0.10.21
+numpy>=1.26,<2
+pygame>=2.5,<3
+pyserial>=3.5
+pytest>=8
